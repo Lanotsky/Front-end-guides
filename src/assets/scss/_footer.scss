@@ -1,0 +1,92 @@
+.footer {
+	width: 100%;
+	margin-top: 120px;
+	min-height: 378px;
+	background-color: #e6ebee;
+	.footer__container {
+	    width: $pcSize;
+        margin: 0 auto;
+		.footer__nav {
+			ul {
+
+				li {
+					// looking for a better way to do this.
+					padding: 90px 16px 95px;
+					display: inline-block;
+					a {
+						p {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+
+		}
+		.footer__info {
+			margin: 0 auto;
+			.footer__img {
+				width: 282px;
+				padding-bottom: 20px;
+				height: 39px;
+				margin: 0 auto;				
+				img {
+				    width: 100%;
+				    height: auto;
+				}
+			}
+			p {
+				font-size: 14px;
+				line-height: 1.7;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+/*
+	li {
+		// looking for a better way to do this.
+		padding: 90px 21px 95px;
+		display: inline-block;
+		a {
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+*/
+
+// footer color -e6ebee
+
+// H -378px
+// bottom nav-to top - 90px
+// bottom nav-to bottom heading -97px
+
+// Bottom heading to bottom txt -20px
+
+// Bottom text to page bottom -89px
+
+// Txt -14pt
+
+// 282 - 39 image
+
+
+// .footer {
+//     width: 100%;
+//     .footer__container{
+//         width: 1100px;
+//         margin: 0 auto;
+//         ul {
+//             widows: 1100px;
+//             margin: 0 auto;
+//             li {
+//                 display: inline-block;
+//             }
+//         }
+//         .footer__paragraph {
+//             margin-top: 20px;
+//         }
+//     }
+// }
+

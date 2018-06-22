@@ -1,0 +1,112 @@
+
+
+.kv__section {
+    position: relative;
+    .kv__contentContainer {
+        position: absolute;
+        width: 100%;
+        bottom: -95px;
+        z-index: 2;
+        .kv__content{
+            margin: 0 auto;
+            width: $pcSize;
+            display: block;
+            .kv__contentBlock{
+                padding: 40px 0;
+                width: 366px;
+                display: block;
+                float: left;
+                color: white;
+                &.first {
+                    background-color: #00437c;
+                }
+                &.second {
+                    background-color: #005ca2;
+                }
+                &.third {
+                    background-color: #0075b6;
+                }
+                .kv__blockTitle{
+                    margin-top: 20px;
+                    text-align: center;
+                    font-size: 26px;
+                    line-height: 1.8;
+                }
+                img {
+                    margin: 0 auto;
+                    margin-top: 40px;
+                    max-width: 100px;
+                    display: block;
+                    text-align: center;
+                }
+                ul {
+                    margin: 0 auto;
+                    margin-top: 40px;
+                    width: calc(100% - 118px);
+                    display: block;
+                    padding: 0 80px;
+                    li {
+                        font-size: 18px;
+                        list-style: disc;
+                        line-height: 1.8;
+                    }
+                }
+            }
+
+        }
+    }
+    
+} //.kv__section
+
+.main__content {
+    .main__contentContainer {
+        width: $pcSize;
+        &.full {
+            width: 100%;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+} // bannder section
+
+
+@media only screen and (max-width: $mobileSize) {
+    .kv__section {
+        .swiper-slide {
+            img {
+                height: 300px;
+            }
+        }
+        .kv__contentContainer {
+            padding: 0;
+            position: relative;
+            z-index: auto;
+            .kv__content {
+                margin: -100px auto;
+                width: 100%;
+                padding: 27px 0;
+                overflow: hidden;
+                .kv__contentBlock {
+                    display: table;
+                    margin: 0 auto;
+                    float: none;
+                    img {
+
+                    }
+                    ul {
+                        width: calc(100% - 171px);
+                        li {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
