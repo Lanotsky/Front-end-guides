@@ -1,0 +1,198 @@
+// content
+
+.main__content {
+    &.child {
+        .main__contentContainer {
+            width: $pcSize;
+            margin: 0 auto;
+            .kv__choice {
+                margin-bottom: 70px;
+                .choice__desc {
+                    padding: 33px 0 29px;
+                    font-size: 18px;
+                    line-height: 2.1;
+                }
+                p {
+                    width: 530px;
+                    padding: 25px 0 25px;
+                    margin-right: 20px;
+                    float: left;
+                    background-color: #4c8dcb;
+                    font-size: 28px;
+                    line-height: 1.5;
+                    color: white;
+                    text-align: center;
+                    &:after {
+                        content: '';
+                        background: url('./../images/common/arrow_right_white.png') no-repeat 0 11px;
+                        background-size: 16px auto;
+                        width: 40px;
+                        height: 47px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        float: right;
+                        margin-top: -3px;
+                        margin-left: -156px; // pushes text forward
+                        margin-right: 156px; // pushes text back to cancel out in the middle
+                    }
+                }
+                // target sibling element
+                p + p {
+                    margin: 0 0 0 20px;
+                }
+            } // .kv__choice
+
+            .content__faq {
+                width: 100%;
+                .kv__banner {
+                    width: 100%;
+                    margin-top: 71px;
+                    display: inline-block;
+                    background-color: #00437c;
+                    h3 {
+                        padding: 10px 0 10px 17px;
+                        display: block;
+                        color: white;
+                        font-size: 24px;
+                        line-height: 1.5;
+                    }
+                } //.kv__banner 
+
+                .faq__section {
+                    width: 100%;
+                    div {
+                        margin-bottom: 55px;
+                        font-size: 0;
+                        div {
+                            width: 60px;
+                            margin: 10px 0 0 3px;
+                            display: inline-block;  
+                            img {
+                                width: 60px;
+                                height: auto;
+                            }
+                        }
+                        p {
+                            width: calc(100% - 108px);
+                            padding-left: 35px;
+                            display: inline-block;
+                            vertical-align: top;
+                            font-size: 18px;
+                            line-height: 2;
+                        }
+                    }
+
+                    div + div {
+                        margin-bottom: 90px;
+                        background-color: #fdeeed;
+                    }
+                } // .faq__section
+            }
+
+        }
+    }
+} // @media
+
+
+@media only screen and (max-width: $mobileSize) {
+.main__content {
+    &.child {
+        width: 100%;
+        .main__contentContainer {
+            width: 100%;
+            // margin: 0 auto;
+            .kv__choice {
+                // margin-bottom: 70px;
+                .choice__desc {
+                    margin-left: 25px;
+                    font-size: 24px;
+                }
+                p {
+                    width: calc(100% - 50px);
+                    // padding: 25px 0 25px;
+                    margin: 0 25px 25px;
+                    float: none;
+                    display: block;
+                    // background-color: #4c8dcb;
+                    // font-size: 28px;
+                    // line-height: 1.5;
+                    // color: white;
+                    // text-align: center;
+                    &:after {
+                        // content: '';
+                        // background: url('./../images/common/arrow_right_white.png') no-repeat 0 11px;
+                        // background-size: 16px auto;
+                        // width: 40px;
+                        // height: 47px;
+                        // vertical-align: middle;
+                        // display: inline-block;
+                        // float: right;
+                        // margin-top: -3px;
+                        // margin-left: -156px; // pushes text forward
+                        // margin-right: 156px; // pushes text back to cancel out in the middle
+                    }
+                }
+                // target sibling element
+                p + p {
+
+                }
+            } // .kv__choice
+
+            .content__faq {
+                // width: 100%;
+                .kv__banner {
+                    // width: 100%;
+                    // margin-top: 71px;
+                    // display: inline-block;
+                    // background-color: #00437c;
+                    h3 {
+                        // padding: 10px 0 10px 17px;
+                        // display: block;
+                        // color: white;
+                        // font-size: 24px;
+                        // line-height: 1.5;
+                    }
+                } //.kv__banner 
+
+                .faq__section {
+                    margin-top: 40px;
+                    div {
+                        // margin-bottom: 55px;
+                        // font-size: 0;
+                        div {
+                            // width: 60px;
+                            // margin: 10px 0 0 3px;
+                            margin: 0 25px 0 24px;
+                            // display: inline-block;  
+                            img {
+                                // width: 60px;
+                                // height: auto;
+                            }
+                        }
+                        p {
+                            width: calc(100% - 135px);
+                            padding-left: 0;
+                            padding-right: 25px;
+                            // display: inline-block;
+                            // vertical-align: top;
+                            // font-size: 18px;
+                            // line-height: 2;
+                        }
+                    }
+
+                    div + div {
+                        // margin-bottom: 90px;
+                        // background-color: #fdeeed;
+                    }
+                } // .faq__section
+            }
+
+        }
+    }
+}
+
+.button__hook {
+    display: none;
+}
+
+}

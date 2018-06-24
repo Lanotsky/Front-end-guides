@@ -1,0 +1,165 @@
+.kv__section {
+    position: relative;
+    // SWIPER ****************
+    .kv__swiperAPI {
+        // prevents .swiper-container from collapsing
+        padding: 1px;
+        height: 600px;
+        font-size: 0;
+        .swiper-container {
+            width: 100%;
+            .swiper-wrapper {
+                .swiper-slide {
+                    img {
+                        height: 599px;
+                    }
+                }
+            }
+        } 
+    }
+    // SWIPER ****************
+    .kv__contentContainer {
+        position: absolute;
+        width: 100%;
+        bottom: -95px;
+        z-index: 2;
+        .kv__content{
+            margin: 0 auto;
+            width: $pcSize;
+            display: block;
+            
+            font-size: 0;
+
+            .kv__contentBlock{
+                padding: 40px 0;
+
+                width: calc(100% / 3);
+
+                // width: 366px
+                display: block;
+                float: left;
+                color: white;
+                &.first {
+                    background-color: #00437c;
+                }
+                &.second {
+                    background-color: #005ca2;
+                }
+                &.third {
+                    background-color: #0075b6;
+                }
+                .kv__blockTitle{
+                    margin-top: 20px;
+                    text-align: center;
+                    font-size: 26px;
+                    line-height: 1.8;
+                }
+                img {
+                    margin: 0 auto;
+                    margin-top: 40px;
+                    max-width: 100px;
+                    display: block;
+                    text-align: center;
+                }
+                ul {
+                    margin-top: 40px;
+                    width: calc(100% - 118px);
+                    display: block;
+                    padding: 0 80px;
+                    li {
+                        font-size: 18px;
+                        list-style: disc;
+                        line-height: 1.8;
+                    }
+                }
+            }
+
+        }
+    }
+    
+} //.kv__section
+
+.main__content {
+    .main__contentContainer {
+        width: $pcSize;
+        &.full {
+            width: 100%;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+} // bannder section
+
+
+@media only screen and (max-width: $mobileSize) {
+    .kv__section {
+        position: relative;
+        // SWIPER ****************
+        .kv__swiperAPI {
+            // prevents .swiper-container from collapsing
+            padding: 1px;
+            height: 364px;
+            font-size: 0;
+            .swiper-container {
+                width: 100%;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        img {
+                            height: 364px;
+                        }
+                    }
+                }
+            } 
+        }
+        // SWIPER ****************
+        .kv__contentContainer {
+            position: static;
+            width: 100%;
+            bottom: -95px;
+            z-index: 2;
+            .kv__content{
+                width: 100%;
+                font-size: 0;
+                .kv__contentBlock{
+                    margin: 0 25px;
+                    width: calc(100% - 50px);
+                    display: inline-block;
+                    float: none;
+
+                    .kv__blockTitle{
+                        margin-top: 20px;
+                        text-align: center;
+                        font-size: 26px;
+                        line-height: 1.8;
+                    }
+                    img {
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        max-width: 100px;
+                        display: block;
+                    }
+                    ul {
+                        padding: 0;
+                        width: 100%;
+                        display: block;
+                        li {
+                            width: calc(100% - 30px);
+                            padding-left: 30px;
+                            font-size: 18px;
+                            line-height: 1.8;
+                            p {
+                                display: list-item;
+                                width: 200px;
+                                margin: 0 auto;
+                                list-style: disc;
+                            }
+                        }
+                    }
+                }
+    
+            }
+        } // .kv__contentContainer
+        
+    }
+}
