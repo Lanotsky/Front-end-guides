@@ -113,8 +113,15 @@ html body {
     margin: 0 auto;
     width: 1100px;
     display: block;
+    position: relative;
     font-size: 0;
     letter-spacing: 0; }
+    .header .header__container .burger__toggle {
+      position: absolute;
+      display: none; }
+      .header .header__container .burger__toggle img {
+        height: 100%;
+        width: 100%; }
     .header .header__container .logo {
       width: 50%;
       display: inline-block;
@@ -208,20 +215,12 @@ html body {
     .header .header__container {
       width: 100%;
       clear: both; }
-      .header .header__container:before {
-        content: '';
-        margin: 4% 0 0 25px;
-        background: url("./../images/common/hamburger-menu.png") no-repeat 0 0;
-        background-size: 55px auto;
-        width: 55px;
-        height: 55px;
-        vertical-align: middle;
-        display: inline-block;
-        float: left; }
+      .header .header__container .burger__toggle {
+        margin: 3% 0 0 25px;
+        display: block; }
       .header .header__container .logo {
         margin: 0 auto;
-        display: block;
-        vertical-align: baseline; }
+        display: block; }
         .header .header__container .logo a {
           display: block; }
           .header .header__container .logo a img {
@@ -230,10 +229,20 @@ html body {
         display: none; }
       .header .header__container .navigation {
         display: none; }
+        .header .header__container .navigation ul li {
+          width: 100%;
+          border-bottom: 2px solid #e6e6e6;
+          display: block;
+          float: none;
+          background-color: #00437c; }
+          .header .header__container .navigation ul li a p {
+            color: #ffffff; }
+        .header .header__container .navigation ul:last-child {
+          border: none; }
 
   .dropDown {
     width: 100%;
-    display: block; }
+    display: none; }
     .dropDown .dropDown__container {
       width: 100%;
       margin: 0 auto; }
@@ -499,7 +508,7 @@ html body {
       text-align: center; }
       .main__content.child .main__contentContainer .kv__choice p:after {
         content: '';
-        background: url("./../images/common/arrow_right_white.png") no-repeat 0 11px;
+        background: url("./../images/common/arrow_right_white.png") no-repeat 0 15px;
         background-size: 16px auto;
         width: 40px;
         height: 47px;
@@ -507,10 +516,13 @@ html body {
         display: inline-block;
         float: right;
         margin-top: -3px;
-        margin-left: -156px;
-        margin-right: 156px; }
+        margin-left: -24%;
+        margin-right: 24%; }
     .main__content.child .main__contentContainer .kv__choice p + p {
       margin: 0 0 0 20px; }
+      .main__content.child .main__contentContainer .kv__choice p + p:after {
+        margin-left: -22%;
+        margin-right: 22%; }
   .main__content.child .main__contentContainer .content__faq {
     width: 100%; }
     .main__content.child .main__contentContainer .content__faq .kv__banner {
@@ -712,11 +724,6 @@ html body {
         font-size: 14px;
         line-height: 1.7;
         text-align: center; }
-
-.footer__extraSpace {
-  width: 100%;
-  height: 320px;
-  background-color: #ffffff; }
 
 @media only screen and (max-width: 768px) {
   .footer .footer__container {

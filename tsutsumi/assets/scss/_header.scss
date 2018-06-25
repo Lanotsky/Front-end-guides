@@ -9,8 +9,17 @@
         margin: 0 auto;
         width: 1100px;
         display: block;
+        position: relative;
         font-size: 0;
         letter-spacing: 0;
+        .burger__toggle {
+            position: absolute;
+            display: none;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }// burger__toggle
         .logo {
             width: 50%;
             display: inline-block;
@@ -102,11 +111,6 @@
                 }
             }
         }
-        // li:nth-child(4){
-        //     &:hover .dropDown {
-        //         display: block;
-        //     }
-        // } // fourth list item
     }
 }
 
@@ -143,22 +147,13 @@
         .header__container {
             width: 100%;
             clear: both;
-            &:before {
-                content: '';
-                margin: 4% 0 0 25px;
-                background: url('./../images/common/hamburger-menu.png') no-repeat 0 0;
-                background-size: 55px auto;
-                width: 55px;
-                height: 55px;
-                vertical-align: middle;
-                display: inline-block;
-                float: left;
-
+            .burger__toggle {
+                margin: 3% 0 0 25px;
+                display: block;
             }
             .logo {
                 margin: 0 auto;
                 display: block;
-                vertical-align: baseline;
                 a {
                     display: block;
                     img {
@@ -174,13 +169,36 @@
 
             .navigation {
                 display: none;
-            }
+                ul {
+                    li {
+                        width: 100%;
+                        border-bottom: 2px solid rgb(230,230,230); 
+                        display: block;
+                        float: none;
+                        background-color: #00437c;
+                        &:hover {
+                           a {
+                               p {
+                               }
+                           }
+                        }
+                        a {
+                            p {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        border: none; 
+                    }
+                }
+            } // @media dropdown .navigation
         }
     }
 
     .dropDown {
         width: 100%;
-        display: block;
+        display: none;
         .dropDown__container {
             width: 100%;
             margin: 0 auto;

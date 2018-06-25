@@ -18,6 +18,7 @@ $(function(){
     kvSwiper();
 });
 
+$(window).widt
 
 $(window).on('resize', function(){
 }); // resize
@@ -78,3 +79,8 @@ $('a[href*="#"]')
   });
 
 
+$('.burger__toggle').click(function(){
+  $('.navigation').toggle('100','linear',function(){
+
+  });
+})
