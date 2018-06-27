@@ -14,11 +14,11 @@
         <header class="header">
             <div class="header__container">
                 <div class="burger__toggle">
-                    <img src="./assets/images/common/hamburger-menu.png" alt="burger button">
+                    <img class="burger__img" src="./assets/images/common/open.png" alt="burger button">
                 </div>
                 <div class="logo">
                     <a href="">
-                        <img src="./assets/images/common/tsutsumi-logo.png" alt="tsutsumi-logo">
+                        <img class="logo__img" src="./assets/images/common/tsutsumi-logo.png" alt="tsutsumi-logo">
                     </a>
                 </div>
         
@@ -47,7 +47,7 @@
             </div>
         </header>
 
-        <div class="dropDown">
+        <div class="dropDown" style="display: block">
             <div class="dropDown__container">
                 <div class="dropDown__banner">
                     <h1>よくあるご質問</h1>
@@ -59,8 +59,18 @@
    
          <div class="main__content child">
             <div class="main__contentContainer">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="" title="">トップ</a>
+                            <p>
+                                > 
+                            </p>
+                        </li>
+                        <li><a href="" title="">よくある質問</a></li>
+                    </ul>
+                </div>
                 <section class="kv__choice">
-                    <h3 class="choice__desc">トップ　　＞　　よくある質問</h3>
+                    <!-- <p class="choice__desc">トップ　＞　よくある質問</p> -->
                     <p>相続税について</p>
                     <p>顧問契約について</p>
                 </section>
@@ -104,7 +114,7 @@
 
                 <section class="content__faq">
                     <div class="kv__banner">
-                        <h3>FAQ</h3>
+                        <h3>相続税について</h3>
                     </div>
                     <div class="faq__section">
                         <div>

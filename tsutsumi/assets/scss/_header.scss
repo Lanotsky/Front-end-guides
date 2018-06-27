@@ -15,6 +15,9 @@
         .burger__toggle {
             position: absolute;
             display: none;
+            height: 60px;
+            width: 60px;
+            font-size: 0;
             img {
                 height: 100%;
                 width: 100%;
@@ -123,7 +126,7 @@
         width: $pcSize;
         margin: 0 auto;
         .dropDown__banner {
-            padding: 69px 0 65px;
+            padding: 39px 0 35px;
             color: white;
             h1 {
                 font-size: 36px;
@@ -133,31 +136,48 @@
     }
 } // .dropDown
 
-
-
-
-
 @media only screen and (max-width: $mobileSize) {
     body {
         padding: 0;
         margin: 0;
     }
     .header {
+        width: 100%;
         padding: 0;
+        position: fixed;
+        background-color: white;
+        z-index: 4;
         .header__container {
             width: 100%;
+            min-height: 30px;
             clear: both;
             .burger__toggle {
-                margin: 3% 0 0 25px;
+                top: 2.5vh;
+                left: 3vw;
+                height: 30px;
+                width: 30px;
                 display: block;
+                cursor: pointer;
+            }
+
+            .burger__active {
+                background: url('../images/common/menu_button_close_sp.png');
+                background: no-repeat;
             }
             .logo {
+                max-width: 160px;
                 margin: 0 auto;
                 display: block;
                 a {
                     display: block;
-                    img {
-                        margin: 30px 0;
+                    .logo__img {
+                        margin: 22px 0;
+                        &.logo__visible {
+                            visibility: visible;
+                        }
+                        &.logo__hidden {
+                            visibility: hidden;
+                        } 
                     }
                 }
 
@@ -172,13 +192,18 @@
                 ul {
                     li {
                         width: 100%;
-                        border-bottom: 2px solid rgb(230,230,230); 
+                        margin-right: 0;                        
+                        border-bottom: 2px solid rgb(230,230,230);
                         display: block;
                         float: none;
                         background-color: #00437c;
+                        p {
+                            max-width: 320px;
+                        }
                         &:hover {
                            a {
                                p {
+                                   
                                }
                            }
                         }
@@ -203,10 +228,10 @@
             width: 100%;
             margin: 0 auto;
             .dropDown__banner {
-                padding: 69px 0 65px;
+                padding: 100px 0 35px;
                 color: white;
                 h1 {
-                    font-size: 36px;
+                    font-size: 24px;
                     line-height: 1.2;
                     text-align: center;
                 }

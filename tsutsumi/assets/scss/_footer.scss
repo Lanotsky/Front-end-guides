@@ -10,13 +10,14 @@
 		.footer__nav {
 			ul {
 				li {
-					padding: 90px 1.61% 95px;
+					padding: 90px 2% 95px;
 					display: inline-block;
 					&:first-of-type {
-						padding: 90px 1.5% 95px 0;
+						padding: 90px 2% 95px 0;
 					}
 					&:last-of-type{
-						padding: 90px 0 95px  1.5%;
+						padding: 90px 0 95px 0;
+						float: right;
 					}
 					a {
 						p {
@@ -65,15 +66,16 @@
 						}
 						&:last-of-type{
 							padding: 0;
+							float: none;
 						}
 						a {
 							p {
-								padding: 30px 0 26px 25px;
+								padding: 15px 0 15px 12px;
 								border-bottom: 2px solid rgb(230,230,230); 
 								background-color: #00437c;
 								text-align: initial;
 								color: #ffffff;
-								font-size: 16px;
+								font-size: 12px;
 							}
 						}
 					}
@@ -84,15 +86,24 @@
 				// margin: 0 auto;
 				padding: 63px 0 65px 0;
 				.footer__img {			
+					padding-bottom: 0;
 					img {
+						margin: 0 auto;
+						width: auto;
+						height: 30px;
+					    display: block;
 					}
 				}
 				p {
+					margin: 0 30px;
+					font-size: 12px;
+				}
+
+				p + p {
+
 				}
 			}
 		}
 	}
 	
 }
-
-

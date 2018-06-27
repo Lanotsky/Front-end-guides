@@ -7,42 +7,14 @@ function kvSwiper(){
         autoplay: {
             delay: 5000,
         },
-        
         fadeEffect: {
             crossFade: true
         }
     });
 }
 
-$(function(){
-    kvSwiper();
-});
-
-$(window).widt
-
-$(window).on('resize', function(){
-}); // resize
-
-$(window).scroll(function(){
-}); // scroll
-
-
-$(window).on('load resize', function(){
-}); // resize
-
-$('.navigation ul li:nth-child(3)').hover(
-  function(e){
-    e.preventDefault();
-  $('.dropDown').css('display', 'block');
-},
-  function(e){
-    e.preventDefault();
-    $('.dropDown').css('display', 'none');
-  }
-)
-
-// Select all links with hashes
-$('a[href*="#"]')
+function scrollToTop(){
+  $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -78,9 +50,40 @@ $('a[href*="#"]')
     }
   });
 
+}
 
-$('.burger__toggle').click(function(){
-  $('.navigation').toggle('100','linear',function(){
+function toggle(){
+    $('.burger__toggle').click(function(){
+      $('.navigation').slideToggle('100', function(){
+        console.log($('.burger__img').attr('src'));
+          if ($('.burger__img').attr('src') == './assets/images/common/open.png') {
+            $('.header__container').css('background-color','#00437c');
+            $('.logo__img').addClass('logo__hidden');
+              $('.burger__img').attr('src', './assets/images/common/close.png');
+              // menu_button_close_sp
+              // dropdown_ico.png
+          } else {
+            $('.logo__img').removeClass('logo__hidden');
+            $('.logo__img').addClass('logo__visible');
+            $('.header__container').css('background-color','white');
+            $('.burger__img').attr('src', './assets/images/common/open.png')
+          }
+      });
+  })
+}
 
-  });
-})
+
+$(function(){
+    kvSwiper();
+    $(window).resize(function(){
+      if ($(window).width() > 768) {
+        $(".navigation").css("display", "block");
+      }else {
+        $(".navigation").css("display", "none");
+      }
+    });
+    toggle();
+    scrollToTop();
+
+});
+

@@ -12,8 +12,9 @@
             .topContent__description {
                 padding: 93px 0;
                 text-align: center;
+                font-weight: 600;
                 .title {
-                    font-weight: 100;
+                    font-weight: 600px;
                     font-size: 34px;
                     line-height: 1.4;
                 }
@@ -222,25 +223,32 @@
 
 
 
-
-
 @media only screen and (max-width: $mobileSize) {
     .main__content {
         &.top {
+            .main__contentContainer:first-child {
+                    padding-top: 0;
+            }
              .main__contentContainer {
                 width: 100%;
+                img {
+                  display: block;
+                  box-sizing: border-box;
+                  background: url('../images/') no-repeat;
+                }
                 .topContent__description {
-                    margin: 0 25px;
+                    margin: 0 0;
                     padding: 0 0 40px;
                     text-align: left;
                     .title {
-
+                        margin: 50px 12px 0;
+                        font-weight: 600;
                     }
                     p {
-
+                        margin: 40px 12px 0;
                         line-height: 1.7;
                         br {
-                            display: none;
+                            
                         }
                         & + & {
                             font-size: 17px;
@@ -249,7 +257,8 @@
                 }
 
                 .topContent__news {
-                    margin: 0 25px;
+                    // margin: 0 25px;
+                    margin: 0 12px;
                     padding: 75px 0;
                     .news__title {
                         margin: 0 0 20px;
@@ -303,11 +312,11 @@
                 .topContent__column {
                     margin-bottom: 0;
                     .news__title {
-                        margin-left: 25px;
+                        margin-left: 12px;
                     }  
                     .columnList__container {
                         width: 85%;
-                        margin: 0 25px 105px;
+                        margin: 0 12px 105px;
                         .columnList_item {
                             width: 100%;
                             margin-right: 0;
@@ -321,20 +330,22 @@
                             }
                             .columnList__image {
                                 // width: calc(50% - 50px);
-                                width: 185px;
-                                margin-right: 40px;
+                                width: auto;
+                                margin-right: 20px;
                                 img {
-                                    width: 185px;
-                                    height: 185px;
+                                    width: auto;
+                                    height: 95px;
                                 }
                             }
                             .columnList__info {
-                                width: calc(100% - 225px);
+                                width: calc(50% + 21px);
                                 .date {
-
+                                    margin-bottom: 10px;
+                                    line-height: 1;
+                                    font-weight: 500;
                                 }
                                 .desc {
-
+                                    font-size: 14px;
                                 }
                             }
                         }
@@ -359,15 +370,16 @@
                 //   .topContent__column
 
                 .subscribe__button {
-                     width: calc(100% - 50px);
-                     margin: 0 25px;
+                     width: calc(100% - 24px);
+                     margin: 0 12px;
                      a {
                          p {
-
+                            font-size: 16px;
                          }
                      }
                      &:after {
-                        width: 118px;
+                        // width: 118px;
+                        display: none;
                      }
                 }
 
@@ -379,6 +391,8 @@
                         }
                         div {
                             width: calc(100% - 2px) !important;
+                            border-left: none;
+                            border-right: none;
                             iframe {
                                 width: 100%;
                             }
