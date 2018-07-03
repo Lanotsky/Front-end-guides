@@ -1,0 +1,41 @@
+@media only screen and (max-width: $mobileSize) {
+
+}
+
+@media only screen and (min-width: $mobileSize){
+    .main__body {
+        // width: $pcSize;
+        width: 100%;
+        height: 1100px;
+        margin: 0 auto;
+    }
+    
+    .kv__slider {
+        width: 100%;
+        .slider__heading {
+            margin: 0 auto;
+            padding: 60px 0 0;
+            text-align: center;
+            h1 {
+                margin-top: 0;
+                font-size: 30px;
+                line-height: 1.5;
+                font-weight: 200;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.7;
+            }
+        } // .slider__heading
+
+        .slider__container {
+            height: 665px;
+            width: 100%;
+            margin-top: 25px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    
+    } //.kv__slider
+    
+}

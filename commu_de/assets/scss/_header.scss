@@ -1,0 +1,170 @@
+// Mobile first
+
+@media only screen and (max-width: $mobileSize){
+
+}
+
+@media only screen and (min-width: $mobileSize){
+	$headerFontColor: rgb(250,250,250);
+	.header {
+		width: 100%;
+		height: 900px;
+		background-color: #0f0f11;
+		.header__layer {
+			width: 100%;
+			margin: 0 auto;
+			height: 900px;
+			position: relative;
+			z-index: 1;
+			&.background {
+				background: url('./../images/commons/header-color-background.png') no-repeat center;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 2;
+			}
+			&.slider {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 3;
+				.slider__container {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					// background: url('./../images/commons/header-background.png') no-repeat right top;
+					// background-size: 1100px 1120px;
+					overflow: hidden;
+					.animation {
+						position: absolute;
+						width: auto;
+						animation-name: fadeIn;
+						animation-duration: 1500ms;
+						animation-fill-mode: forwards;
+						opacity: 0;
+						&:first-child {
+							top: 0px;
+							right: 447px; 
+							height: 151px;
+							animation-delay: 1000ms;
+						}
+						&:nth-child(2){
+							top: 0px;
+							right: 557px;
+							height: 404px;
+							animation-delay: 1700ms;
+						}
+						&:nth-child(3){
+							top: 0;
+							right: 0;
+							height: 419px;
+							animation-delay: 2400ms;
+						}
+						&:nth-child(4){
+							height: 532px;
+							right: 321px;
+							top: 212px;
+							animation-delay: 3100ms;
+						}
+						&:nth-child(5){
+							height: 436px;
+							right: 0;
+							top: 352px;
+							animation-delay: 3800ms;
+						}
+						&:nth-child(6) {
+							bottom: -217px;
+							right: 228px;
+							height: 534px;
+							animation-delay: 4500ms;
+						}
+					}
+				
+				}
+
+			}
+			&.data {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 4;
+				.data__wrapper {
+					width: 1100px; // width of text container compared to logo and contact
+					height: 900px;
+					margin: 0 auto;
+					position: relative;
+					.logo {
+						img {
+							width: 130px;
+							height: 15px;
+							// margin: 32px 0 0 30px;
+							margin: 32px 0 0 -136px;
+						}
+					}
+					& > span {
+						// margin: 20px 30px 0 0;
+						margin: 20px -129px 0 0;
+						float: right;
+						clear: both;
+						color: $headerFontColor;
+						font-size: 18px;
+						line-height: 1.7;
+						& + span {
+							// margin: 0 30px 0 0;
+							margin: 0 -129px 0 0;
+							font-size: 11px;
+							line-height: 1;
+						}
+					}			
+					.header__text {
+						width: 60%;
+						color: $headerFontColor;
+						position: absolute;
+						top: 325px;
+						left: 0;
+						h2 {
+							font-size: 36px;
+							line-height: 1.2;
+						}
+						.header__desc {
+							margin-bottom: 30px;
+							font-size: 20px;
+							line-height: 2.25;
+						}
+						.header__paragraph {
+							font-size: 15px;
+							line-height: 1.8;
+						}
+						a {
+							width: 335px;
+							margin: 45px 0;
+							padding: 15px 0;
+							display: block;
+							text-align: center;
+							border-radius: 30px;
+							background-color: #f6f6f6;
+							color: black;
+							font-size: 16px;
+							line-height: 1.6;
+						}
+					}
+				}
+	
+			}
+		}
+	}
+	
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
