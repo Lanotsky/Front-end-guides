@@ -1,0 +1,95 @@
+.mid__banner {
+    width: 100%;
+    background-color: #101012;
+    color: rgb(251,251,251);
+    .mid__container {
+        width: $pcSize;
+        margin: 0 auto;
+        h2 {
+            padding-top: 56px;
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            line-height: 1.8;
+        }
+        .mid__column {
+            width: 49%;
+            height: auto;
+            margin: 0 auto;
+            display: inline-block;
+            font-size: 0;
+            &.right {
+                .mid__row {
+                    .column__icon {
+                        padding-left: 25px;
+                        img {
+                        }
+                    }
+                    p {
+                    }
+                }
+            }
+
+            .mid__row {
+                display: block; 
+                .column__icon {
+                    img {
+                        height: 47px;
+                        width: auto;
+                    }
+                }
+                p {
+                    // padding-left: 30px;
+                    color: white;
+                    font-size: 15px;
+                }
+                p:last-child {
+                    // padding-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+// .mid_banner {
+//     width: 100%;
+//     background-color: #101012;
+//     color: rgb(251,251,251);
+//     .midBanner__container {
+//         width: $pcSize;
+//         margin: 0 auto;
+//         h2 {
+//             padding-top: 56px;
+//             display: block;
+//             text-align: center;
+//             font-size: 24px;
+//             line-height: 1.8;
+//         }
+//         .midBanner__col {
+//             width: 49%;
+//             display: inline-block;
+//             font-size: 0;
+//             border: 1px solid red;
+//             .midBanner__icon {
+//                 border: 1px solid green;
+//                 height: 47px;
+//                 width: auto;
+//                 display: inline-block;
+//                 img {
+//                     height: 47px;
+//                     width: auto;
+//                 }
+//             } //.midBanner__icon
+    
+//             .midBanner__text {
+//                 border: 1px solid blue;
+//                 float: ri;
+//                 p {
+//                     font-size: 15px;
+//                     display: inline-block;
+//                 }
+//             } // .midBanner__text
+//         }
+//     }
+
+// }
