@@ -1,0 +1,91 @@
+@media only screen and (max-width: $mobileSize) {
+    .header {
+        width: 100%;
+        position: fixed;
+        height: 75px;
+        z-index: 3;
+        transition: all 400ms linear;
+        top: 0;
+        &.navi-hide {
+            top: -100px;
+        }
+        .logo {
+            display: inline-block;
+            margin: 12px 0 0 12px;
+            img {
+                height: auto;
+                width: 100px;
+            }
+        }
+    }
+    .tel {
+        height: 38;
+        width: auto;
+        margin-top: 12px    ;
+        background-color: #8fc31f;
+        float: right;
+        color: white;
+        vertical-align: middle;
+        p {
+            padding: 10px;
+            padding-right: 0;
+        }
+        .tel__desc {
+            display: inline-block;
+            font-size: 12px;
+        }
+        .tel__no {
+            display: none;
+        }
+        .tel__no-sp {
+            height: 15px;
+            width: auto;
+            padding: 9px 20px 9px 0;
+        }
+    }
+} // sp
+
+@media only screen and (min-width: $mobileSize) {
+    .header {
+        width: 100%;
+        position: fixed;
+        height: 75px;
+        z-index: 3;
+        transition: all 400ms linear;
+        top: 0;
+        &.navi-hide {
+            top: -100px;
+        }
+        .logo {
+            height: 20px;
+            width: auto;
+            display: inline-block;
+            margin: 24px 0 0 24px;
+            img {
+                height: 20px;
+                width: auto;
+            }
+        }
+    }
+    .tel {
+        height: 38;
+        width: 330px;
+        margin-top: 20px;
+        background-color: #8fc31f;
+        float: right;
+        color: white;
+        vertical-align: middle;
+        p {
+            padding: 10px;
+        }
+        .tel__desc {
+            display: inline-block;
+        }
+        .tel__no {
+            display: inline-block
+        }
+        .tel__no-sp {
+            display: none;
+        }
+    }
+} // pc

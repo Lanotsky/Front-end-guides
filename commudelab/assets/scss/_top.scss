@@ -1,0 +1,217 @@
+@media only screen and (max-width: $mobileSize) {
+    .kv__top-header {
+        width: 100%;
+        background: url("../imgs/top/kv-header-bg.png") no-repeat center;
+        background-size: cover;
+        .kv__header-inner {
+            width: 100%;
+            .kv__header-desc {
+                padding: 64px 0 0;
+                .title {
+                    color: white;
+                    font-size: 6.3vw;
+                    line-height: 1.5;
+                    text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
+                    margin: 0 11px;
+                    &.large {
+                        margin-top: 11px;
+                        font-size: 10vw;
+                    }
+                }
+            } // .kv__header-desc
+            .kv__header-boxes {
+                width: 100%;
+                margin-top: 4vh;
+                padding-bottom: 4vh;
+                .kv__header-box {
+                    width: 70%;
+                    height: auto;
+                    background-color: rgba(216,109,64,0.9);
+                    display: block;
+                    margin: 15px auto;
+                    img {
+                        height: auto;
+                        width: 17vw;
+                        padding: 11px 0;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                    .header__box-desc {
+                        text-align: center;
+                     }
+                     p {
+                         font-size: 4vw;
+                         color: white;
+                         padding-bottom: 3vh;
+                     }
+                     &:nth-child(1) {
+                     }
+                     &:nth-child(2) {
+
+                     }
+
+                     &:nth-child(3) {
+                        img {
+                            height: auto;
+                            width: 16vw;
+                            padding: 13px 0;
+                        }
+                     }
+                }
+            }
+        }
+
+        .kv__header-circle {
+            height: 90px;
+            width: 90px;
+            background-color: rgba(143,195,31,0.9);
+            border-radius: 50% 50%;
+            position: fixed;
+            bottom: 50px;
+            right: 10px;
+            z-index: 2;
+            transition: all 200ms linear;
+            &:hover {
+                border: 2px solid #8fc31f;
+                background-color: #fff;
+                .inner__circle {
+                    p {
+                        color: #8fc31f;
+                    }
+                }
+            }
+            .inner__circle {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                p {
+                    width: 80px;
+                    margin: 0 auto;
+                    text-align: center;
+                    position: absolute;
+                    bottom: 18px;
+                    right: 5px;
+                    color: white;
+                    line-height: 1.4;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+} // sp
+
+@media only screen and (min-width: $mobileSize) {
+    .kv__top-header {
+        width: 100%;
+        height: 748px;
+        background: url('../imgs/top/kv-header-bg.png') no-repeat center;
+        background-size: cover;
+        background-position: center center;
+        .kv__header-inner {
+            max-width: $pcSize;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            .kv__header-desc {
+                position: absolute;
+                top: 286px;
+                left: 0;
+                .title {
+                    color: white;
+                    font-size: 30px;
+                    line-height: 1.5;
+                    text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
+                    .sp {
+                        display: none;
+                    }
+                    &.large {
+                        font-size: 40px;
+                        font-weight: bolder;
+                    }
+                }
+            } // .kv__header-desc
+            .kv__header-boxes {
+                position: absolute;
+                top: 120px;
+                left: 0;
+                width: $pcSize;
+                margin: 0 auto;
+                .kv__header-box {
+                    height: 139px;
+                    width: 328px;
+                    display: inline-block;
+                    background-color: rgba(216,109,64,0.9);
+                    img {
+                        height: 57px;
+                        width: auto;
+                        margin: 28px auto 20px;
+                        display: block;
+                        vertical-align: bottom;
+                    }
+                    .header__box-desc {
+                        width: 100%;
+                        text-align: center;
+                        display: block;
+                     }
+                     p {
+                         color: white;
+                     }
+                     &:nth-child(1) {
+                         margin-right: 54px;
+                     }
+                     &:nth-child(2) {
+                         margin-right: 54px;
+                        // margin: 0 auto;
+                     }
+
+                     &:nth-child(3) {
+                        margin-right: 0;
+                        float: right;
+                        img {
+                            height: 42px;
+                            width: auto;
+                            margin: 35px auto 25px;
+                        }
+                     }
+                }
+            }
+        }
+
+        .kv__header-circle {
+            height: 150px;
+            width: 150px;
+            background-color: rgba(143,195,31,0.9);
+            border-radius: 50% 50%;
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            z-index: 2;
+            transition: all 200ms linear;
+            &:hover {
+                border: 2px solid #8fc31f;
+                background-color: #fff;
+                .inner__circle {
+                    p {
+                        color: #8fc31f;
+                    }
+                }
+            }
+            .inner__circle {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                p {
+                    width: 97px;
+                    margin: 0 auto;
+                    text-align: center;
+                    position: absolute;
+                    bottom: 35px;
+                    right: 26px;
+                    color: white;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+} // pc
+

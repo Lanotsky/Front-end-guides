@@ -1,0 +1,105 @@
+@media only screen and (max-width: $mobileSize) {
+    .footer {
+        width: 100%;
+        margin: 0 auto;
+        .column {
+            width: 100%;
+            display: block;
+            height: 100%;
+        .footer__column-logo {
+            width: 154px;
+            height: auto;
+            margin: 40px auto 20px;
+            img {
+                width: 154px;
+                height: auto;
+            }
+        }
+        .footer__column-text {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            .footer__heading {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+            p {
+                line-height: 1.6;
+                font-size: 12px;
+            }
+        }
+            &.b {
+                text-align: center;
+                ul {
+                    margin-top: 20px;
+                    background-color: rgba(40,40,40,0.1);
+                    display: block;
+                    li {
+                        display: inline;
+                        padding: 0 3px;
+                        list-style: none;
+                        font-size: 11px;
+                    }
+                    &:last-child {
+                        margin: 5px 0 40px;
+                    }
+                }
+                span {
+                    padding: 21px 0 18px;
+                    font-size: 75%;
+                    display: block;
+                }
+            }
+        }
+    }
+} // sp
+
+@media only screen and (min-width: $mobileSize) {
+    .footer {
+        width: $pcSize;
+        margin: 0 auto;
+        .column {
+            width: 45%;
+            display: inline-block;
+            height: 100%;
+        .footer__column-logo {
+            width: 154px;
+            height: auto;
+            margin: 45px 0 20px;
+            img {
+                width: 154px;
+                height: auto;
+            }
+        }
+        .footer__column-text {
+            .footer__heading {
+                margin: 10px 0;
+            }
+            p {
+                line-height: 1.6;
+            }
+        }
+            &.b {
+                float: right;
+                text-align: right;
+                ul {
+                    margin-top: 86px;
+                    display: block;
+                    li {
+                        display: inline-block;
+                        padding: 0 10px;
+                        list-style: none;
+                    }
+                    &:last-child {
+                        margin: 5px 0 40px;
+                    }
+                }
+                span {
+                    padding: 38px 0 40px;
+                    font-size: 75%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
