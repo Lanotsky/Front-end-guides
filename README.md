@@ -4,4 +4,7 @@
 ###### Contains static source for:
 1. Tustusmi 
 2. Commude-app
+3. commudelab
+
+All of these documents are used for testing and practice purpose only
 
