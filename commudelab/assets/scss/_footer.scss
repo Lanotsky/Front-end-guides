@@ -26,13 +26,16 @@
             p {
                 line-height: 1.6;
                 font-size: 12px;
+                font-family: sans-serif;
             }
         }
             &.b {
                 text-align: center;
+                font-family: sans-serif;
                 ul {
                     margin-top: 20px;
                     background-color: rgba(40,40,40,0.1);
+                    padding: 5px 0;
                     display: block;
                     li {
                         display: inline;
@@ -74,9 +77,11 @@
         .footer__column-text {
             .footer__heading {
                 margin: 10px 0;
+                font-family: "a-otf-midashi-go-mb31-pr6n",sans-serif; 
             }
             p {
                 line-height: 1.6;
+                font-family: sans-serif;
             }
         }
             &.b {
@@ -89,6 +94,7 @@
                         display: inline-block;
                         padding: 0 10px;
                         list-style: none;
+                        font-family: sans-serif;
                     }
                     &:last-child {
                         margin: 5px 0 40px;
@@ -98,6 +104,7 @@
                     padding: 38px 0 40px;
                     font-size: 75%;
                     display: block;
+                    font-family: sans-serif;
                 }
             }
         }

@@ -1,0 +1,301 @@
+@media only screen and (max-width: $mobileSize) {
+    // ***** SP-LAYOUT ******
+    .footer {
+        width: 100%;
+        background-color: #0061b7;
+        &.pc {
+            display: none;
+        }
+        &.sp {
+            display: block;
+        }
+        &.top {
+            .footer__container {
+                width: 100%;
+                margin: 0 auto;
+                .item {
+                    width: 100%;
+                    display: inline-block;
+                    margin-top: 100px;
+                    vertical-align: top;
+                    color: white;
+                    .item__heading {
+                        padding: 30px 0 15px 0;
+                        color: white;
+                        font-size: 13px;
+                    }
+                    &.footer__logo {
+                        vertical-align: top;
+                        background-color: #ffffff;
+                        width: 90%;
+                        color: black;
+                        display: block;
+                        margin: 0 auto ;
+                        &:after {
+                            content: '';
+                            height: 30px;
+                            display: block;
+                            background-color: #0061b7;
+                        }
+                        img {
+                            width: 257px;
+                            height: auto;
+                            padding: 15px 0;
+                            margin: 0 auto;
+                            display: block;
+                        }
+                        p {
+                            font-size: 10px;
+                            padding-bottom: 17px;
+                            text-align: center;
+                        }
+                    }
+                    &.footer__siteMap {
+                        width: 90%;
+                        margin: 0 auto;
+                        display: block;
+                        .footer-nav {
+                            width: 49%;
+                            display: inline-block;
+                            vertical-align: top;
+                            padding-bottom: 25px;
+                            li {
+                                padding: 8px 0;
+                                transition: all 200ms linear;
+                                &:hover {
+                                    text-decoration: underline;
+                                    text-decoration-color: white;
+                                }
+                                a {
+                                    color: white;
+                                    font-weight: 100;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    &.footer__contact {
+                        width: 90%;
+                        margin: 0 auto;
+                        display: block;
+                        p {
+                            font-size: 12px;
+                            line-height: 1.5;
+                            display: block;
+                        }
+                        // .item__heading {
+                        //     padding: 20px 0 25px 0;
+                        //     color: white;
+                        //     font-size: 21px;
+                        //     line-height: 1;
+                        // }
+                        .contact-info {
+                            
+                        }
+                        .contact-desc {
+                            padding-top: 15px;
+                        }
+                        .contact-btn {
+                                width: 124px;
+                                background-color: white;
+                                padding: 9px;
+                                margin-top: 10px;
+                                border: 1px solid white;
+                                transition: all 200ms linear;
+                            img {
+                                width: 20px;
+                                height: auto;
+                                vertical-align: middle;
+                                padding-left: 10px;
+                            }
+                            p {
+                                color: #0061b7;
+                                text-align: left;
+                                display: inline-block;
+                                padding-left: 4px;
+                            }
+                            &:hover {
+                                background-color: transparent;
+                                p {
+                                    color: white;
+                                }
+                            }
+                        }
+                        .contact-tel {
+                            border-bottom: 1px solid white;
+                            padding-top: 20px;
+                            padding-bottom: 25px;
+                            a {
+                                &:hover {
+                                    p {
+                                        text-decoration: underline;
+                                        text-decoration-color: white;
+                                    }
+
+                                }
+                                p {
+                                    font-size: 20px;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    color: white;
+                                }   
+                                img {
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: auto;
+                                    vertical-align: middle;
+                                    padding-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} // sp
+
+@media only screen and (min-width: $mobileSize) {
+     // ***** PC-LAYOUT ******
+    .footer {
+        width: 100%;
+        background-color: #0061b7;
+        &.pc {
+            display: block;
+        }
+        &.sp {
+            display: none;
+        }
+        &.top {
+            .footer__container {
+                width: 1200px;
+                margin: 0 auto;
+                .item {
+                    width: 31%;
+                    display: inline-block;
+                    margin-top: 100px;
+                    vertical-align: top;
+                    color: white;
+                    .item__heading {
+                        padding: 20px 0 25px 0;
+                        color: white;
+                        font-size: 21px;
+                    }
+                    &.footer__logo {
+                        vertical-align: top;
+                        background-color: #ffffff;
+                        width: 300px;
+                        color: black;
+                        img {
+                            width: 257px;
+                            height: auto;
+                            padding: 15px 0;
+                            margin: 0 auto;
+                            display: block;
+                        }
+                        p {
+                            font-size: 10px;
+                            padding-bottom: 17px;
+                            text-align: center;
+                        }
+                    }
+                    &.footer__siteMap {
+                        border-top: 1px solid white;
+                        margin-left: 75px;
+                        .footer-nav {
+                            width: 49%;
+                            display: inline-block;
+                            vertical-align: top;
+                            padding-bottom: 25px;
+                            li {
+                                padding: 12px 0;
+                                transition: all 200ms linear;
+                                &:hover {
+                                    text-decoration: underline;
+                                    text-decoration-color: white;
+                                }
+                                a {
+                                    color: white;
+                                    font-weight: 100;
+                                }
+                            }
+                        }
+                    }
+                    &.footer__contact {
+                        border-top: 1px solid white;
+                        margin-left: 70px;
+                        p {
+                            font-size: 12px;
+                            line-height: 2;
+                            display: block;
+                        }
+                        .item__heading {
+                            padding: 20px 0 25px 0;
+                            color: white;
+                            font-size: 21px;
+                            line-height: 1;
+                        }
+                        .contact-info {
+                            
+                        }
+                        .contact-desc {
+                            padding-top: 20px;
+                        }
+                        .contact-btn {
+                                width: 124px;
+                                background-color: white;
+                                padding: 9px;
+                                margin-top: 8px;
+                                border: 1px solid white;
+                                transition: all 200ms linear;
+                            img {
+                                width: 20px;
+                                height: auto;
+                                vertical-align: middle;
+                                padding-left: 10px;
+                            }
+                            p {
+                                color: #0061b7;
+                                text-align: left;
+                                display: inline-block;
+                                padding-left: 4px;
+                            }
+                            &:hover {
+                                background-color: transparent;
+                                p {
+                                    color: white;
+                                }
+                            }
+                        }
+                        .contact-tel {
+                            padding-top: 20px;
+                            margin-bottom: 50px;
+                            a {
+                                &:hover {
+                                    p {
+                                        text-decoration: underline;
+                                        text-decoration-color: white;
+                                    }
+
+                                }
+                                p {
+                                    font-size: 20px;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    color: white;
+                                }   
+                                img {
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: auto;
+                                    vertical-align: middle;
+                                    padding-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} // pc

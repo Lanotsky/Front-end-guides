@@ -37,6 +37,16 @@ function smoothScroller() {
     });
 }
 
+function changeOnHover() {
+    $( ".tel" ).hover(
+        function() {
+          $( '.tel__no-sp' ).attr('src','./assets/imgs/commons/header-phone-sp-hover.png');
+        }, function() {
+          $( '.tel__no-sp' ).attr('src','./assets/imgs/commons/header-phone-sp.png');
+        }
+      );
+}
+
 
 function hideHeader(){
 	var didScroll;
@@ -88,5 +98,6 @@ $(function(){
         arrows: false,
       });
       smoothScroller();
-      hideHeader();
+    //   hideHeader();
+      changeOnHover();
 });

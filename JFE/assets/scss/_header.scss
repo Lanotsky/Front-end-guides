@@ -1,0 +1,295 @@
+@media only screen and (max-width: $mobileSize) {
+    // ***** SP-LAYOUT *****
+    .header {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        &.top {
+            height: 60px;
+            width: 100%;
+            background-color: rgba(255,255,255,0.6);
+            .burger-sp {
+                position: absolute;
+                top: 10px;
+                // right: 10px;
+                right: 5%; // +
+                width: 30px;
+                padding-left: 5px;
+                display: inline-block;
+                z-index: 3;
+                &.white {
+                    .bar {
+                        background-color: rgb(240,240,240);
+                    }
+                }
+                .bar {
+                  width: 30px;
+                  height: 4px;
+                  background-color: rgba(50,50,50,0.9);
+                  margin: 6px 0;
+                  transition: all 400ms;
+                  &.top{}
+                  &.mid {}
+                  &.bottom {}
+                  &.one {
+                    transform: rotate(-45deg) translate(-8px, 6px);
+                  }
+                  
+                  &.two {
+                    opacity: 0;
+                  }
+                  
+                  &.three {
+                    transform: rotate(45deg) translate(-8px,-6px);
+                  }
+                }
+                
+              } // satnadard pattern
+            .header__container {
+                width: 100%;
+                margin: 0 auto;
+                position: relative;
+                h1 {
+                    margin: 0;
+                }
+                .logo {
+                    width: auto;
+                    height: auto;
+                    padding-top: 12px;
+                    img {
+                        width: auto;
+                        height: 42px;
+                    }
+                }
+                .nav {
+                    &.sp {
+                        display: none;
+                    }
+                    // **** SP-LAYOUT see .burger-dropDown ****
+                }
+                .header-contact {
+                    &.sp {
+                        display: none;
+                    }
+                    // **** SP-LAYOUT see .burger-dropDown ****
+                }
+                .burger-dropDown {
+                    position: absolute;
+                    top: -300px;
+                    left: 0;
+                    height: 0;
+                    width: 100%;
+                    background-color: #0073bd;
+                    z-index: 1;
+                    overflow: hidden;
+                    transition: all 275ms ease-in;
+                    height: auto;
+                    &.active {
+                        top: 0;
+                    }
+                    .dropDown__container {
+                        position: relative;
+                        height: 100%;
+                        display: block;
+                        .nav {
+                            width: 100%;
+                            padding: 63px 0 0;
+                            ul {
+                                display: block;
+                                li {
+                                    position: relative;
+                                    list-style: none;
+                                    display: block;
+                                    font-size: 12px;
+                                    transition: all 200ms linear;
+                                    border-bottom: 1px solid transparent;
+                                    width: 100%;
+                                    &:hover {
+                                        background-color: white;
+                                        a {
+                                            color: #0073bd;
+                                        }
+                                    }
+                                    a {
+                                        padding: 16px 0;
+                                        margin: 0 10px;
+                                        display: block;
+                                        color: white;
+                                        border-bottom: 1px solid white;
+                                    }
+                                    .drop-down-drawer {
+                                        position: absolute;
+                                        bottom: -83px;
+                                        left: 0;
+                                        height: 0px;
+                                        overflow: hidden;
+                                        transition: all 200ms linear;
+                                        &.sp {
+                                            display: none;
+                                        }
+                                        li {
+                                            width: 52px;
+                                            background-color: #ffff;
+                                        }
+                                    }
+                                }
+                            }
+                        } // nav-sp
+                        .header-contact {
+                            &.sp {
+                                display: none;
+                            }
+                            display: block;
+                            background-color: #0073bd;
+                            width: 100%;
+                            transition: all 200ms linear;
+                            a {
+                                height: auto;
+                                display: block;
+                                .contact {
+                                    height: 100%;
+                                    width: 100%;
+                                    position: relative;
+                                    transition: all 200ms linear;
+                                    &:hover {
+                                        background-color: white;
+                                        p {
+                                            color: #0073bd;
+                                        }
+                                    }
+                                    img {
+                                        width: 20px;
+                                        height: auto;
+                                        position: absolute;
+                                        left: 10px;
+                                        top: 10px;
+                                    }
+                                    p {
+                                        padding: 11px 18px 30px 0;
+                                        color: white;
+                                        font-size: 12px;
+                                        padding-left: 42px;
+                                    }
+                                }
+                            }
+                        } // header-contact sp
+                }
+                } // burger-dropDown
+            } // header-container
+        }
+    }
+} // sp
+
+@media only screen and (min-width: $mobileSize) {
+    // ***** PC-LAYOUT *****
+    .header {
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        &.top {
+            height: 120px;
+            width: 100%;
+            background-color: rgba(255,255,255,0.6);
+            .burger-sp {
+                display: none;
+            }
+            .header__container {
+                width: 1200px;
+                margin: 0 auto;
+                position: relative;
+                h1 {
+                    margin: 0;
+                }
+                .logo {
+                    width: 280px;
+                    height: auto;
+                    padding-top: 42px;
+                    img {
+                        width: 280px;
+                        height: auto;
+                    }
+                }
+                .nav {
+                    position: absolute;
+                    top: 45px;
+                    right: 190px;
+                    ul {
+                        display: inline-block;
+                        li {
+                            position: relative;
+                            padding: 16px;
+                            list-style: none;
+                            display: inline-block;
+                            font-size: 12px;
+                            transition: all 200ms linear;
+                            border-bottom: 1px solid transparent;
+                            &:hover {
+                                background-color: #fff;
+                                border-bottom: 1px solid rgba(200,200,200,0.8);
+                            }
+                            .drop-down-drawer {
+                                position: absolute;
+                                bottom: -83px;
+                                left: 0;
+                                height: 0px;
+                                overflow: hidden;
+                                transition: all 200ms linear;
+                                li {
+                                    width: 52px;
+                                    background-color: #ffff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .header-contact {
+                    background-color: #3a474e;
+                    float: right;
+                    width: 150px;
+                    text-align: right;
+                    position: absolute;
+                    top: 45px;
+                    right: 0;
+                    border: 1px solid transparent;
+                    transition: all 200ms linear;
+                    &:hover {
+                        background-color: transparent;
+                        border: 1px solid #0061b7;
+                        .contact {
+                            p {
+                                color: #0061b7;
+                            }
+                        }
+                    }
+                    .contact {
+                        height: 100%;
+                        width: 100%;
+                        position: relative;
+                        img {
+                            padding: 0 10px;
+                            width: 20px;
+                            height: auto;
+                            position: absolute;
+                            left: 10px;
+                            top: 12px;
+                        }
+                        p {
+                            padding: 13px 18px 13px 0;
+                            display: inline-block; 
+                            color: white;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .burger-dropDown {
+                    display: none;
+                }
+            } // header-container
+
+        }
+    }
+} // pc

@@ -1,0 +1,153 @@
+@media only screen and (max-width: $mobileSize) {
+    // ***** SP-LAYOUT *****
+    .kv__banner {
+        position: relative;
+        z-index: 0;
+        // padding-bottom: 150px;
+        // padding-bottom: 50vh; // +
+        &.child {
+            background: url('../img/child/banner-child-01.png') no-repeat center;
+            background-size: cover;
+        }
+        &.top {
+            // height: 282px;
+            height: 55vh; // +
+            padding-bottom: 25vh;
+            width: 100%;
+            background: url("../img/top/banner-top.png") no-repeat center;
+            background-size: cover;
+            .kv__container {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                position: relative;
+                .our-mission {
+                    background-color: rgba(0, 117, 190,0.9);
+                    position: absolute;
+                    // bottom: -150px;
+                    // bottom: -50vh; // +
+                    bottom: -25vh;
+                    right: 0;
+                    z-index: 0;
+                    // margin: 0 10px;
+                    margin: 0 5%; // +
+                    .mission__container {
+                        position: relative;
+                        height: 100%;
+                        width: 100%;
+                        .line-heading {
+                            position: absolute;
+                            top: 30px;
+                            left: 0;
+                            opacity: 0.5;
+                            .heading-desc {
+                                font-size: 5px;
+                                padding-left: 20px;
+                                padding-top: 4px;
+                                img {
+                                    width: 17px;
+                                    height: auto;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 6px;
+                                    height: 1px;
+                                }
+                            }
+                        }
+                        p {
+                            padding: 0 20px;
+                            color: white;
+                        }
+                        .mission-heading {
+                            padding: 42px 20px 15px;
+                            font-size: 13px;
+                        }
+                        .mission-paragraph {
+                            padding-bottom: 30px;
+                            font-size: 10px;
+                            line-height: 1.9;
+                            font-weight: 100;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+} // sp
+
+@media only screen and (min-width: $mobileSize) {
+     // ***** PC-LAYOUT *****
+    .kv__banner {
+        position: relative;
+        margin-bottom: 60px;
+        &.top {
+            height: 890px;
+            width: 100%;
+            background: url("../img/top/banner-top.png") no-repeat center;
+            background-size: cover;
+            .kv__container {
+                width: 1200px;
+                height: 100%;
+                margin: 0 auto;
+                position: relative;
+                .our-mission {
+                    background-color: #0075be;
+                    max-width: 630px;
+                    position: absolute;
+                    bottom: 75px;
+                    right: 0;
+                    z-index: 2;
+                    .mission__container {
+                        position: relative;
+                        height: 100%;
+                        width: 100%;
+                        .line-heading {
+                            position: absolute;
+                            top: 50px;
+                            left: 0;
+                            opacity: 0.5;
+                            .heading-desc {
+                                font-size: 12px;
+                                padding-left: 55px;
+                                padding-top: 4px;
+                                img {
+                                    width: 50px;
+                                    height: auto;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 10px;
+                                }
+                            }
+                        }
+                        p {
+                            padding: 0 55px;
+                            color: white;
+                        }
+                        .mission-heading {
+                            padding: 80px 55px 22px;
+                            font-size: 28px;
+                        }
+                        .mission-paragraph {
+                            padding-bottom: 60px;
+                            font-size: 13px;
+                            line-height: 1.9;
+                            font-weight: 100;
+                        }
+                    }
+
+                }
+            }
+        } // top
+        &.child {
+            height: 400px;
+            width: 100%;
+            background: url('../img/child/banner-child-01.png') no-repeat center;
+            background-size: cover;
+        }
+    }
+} // pc
+
+@keyframes animation {
+
+}

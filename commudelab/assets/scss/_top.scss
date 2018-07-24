@@ -13,9 +13,11 @@
                     line-height: 1.5;
                     text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
                     margin: 0 11px;
+                    font-weight: 300;
                     &.large {
                         margin-top: 11px;
                         font-size: 10vw;
+                        font-weight: 500;
                     }
                 }
             } // .kv__header-desc
@@ -62,6 +64,7 @@
         }
 
         .kv__header-circle {
+            display: none;
             height: 90px;
             width: 90px;
             background-color: rgba(143,195,31,0.9);
@@ -71,8 +74,8 @@
             right: 10px;
             z-index: 2;
             transition: all 200ms linear;
+            border: 2px solid #8fc31f;
             &:hover {
-                border: 2px solid #8fc31f;
                 background-color: #fff;
                 .inner__circle {
                     p {
@@ -121,12 +124,13 @@
                     font-size: 30px;
                     line-height: 1.5;
                     text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5);
+                    font-weight: 300;
                     .sp {
                         display: none;
                     }
                     &.large {
                         font-size: 40px;
-                        font-weight: bolder;
+                        font-weight: 500;
                     }
                 }
             } // .kv__header-desc
@@ -187,8 +191,8 @@
             right: 20px;
             z-index: 2;
             transition: all 200ms linear;
+            border: 2px solid #8fc31f;
             &:hover {
-                border: 2px solid #8fc31f;
                 background-color: #fff;
                 .inner__circle {
                     p {

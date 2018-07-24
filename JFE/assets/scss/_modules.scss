@@ -1,0 +1,18 @@
+@media only screen and (max-width: $mobileSize) {
+
+} // sp reusables
+
+@media only screen and (min-width: $mobileSize) {
+    .heading-desc {
+        font-size: 12px;
+        padding-left: 55px;
+        padding-top: 4px;
+        img {
+            width: 55px;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+    }
+} // pc reusables

@@ -1,7 +1,7 @@
 @media only screen and (max-width: $mobileSize) {
     .header {
         width: 100%;
-        position: fixed;
+        position: absolute;
         height: 75px;
         z-index: 3;
         transition: all 400ms linear;
@@ -23,24 +23,37 @@
         width: auto;
         margin-top: 12px    ;
         background-color: #8fc31f;
+        border: 2px solid #8fc31f;
         float: right;
-        color: white;
         vertical-align: middle;
-        p {
-            padding: 10px;
-            padding-right: 0;
+        transition: all 300ms linear;
+        &:hover {
+            background-color: #ffffff;
+            a {
+                p {
+                    color: #8fc31f;
+                }
+            }
         }
-        .tel__desc {
-            display: inline-block;
-            font-size: 12px;
-        }
-        .tel__no {
-            display: none;
-        }
-        .tel__no-sp {
-            height: 15px;
-            width: auto;
-            padding: 9px 20px 9px 0;
+        a {
+            p {
+                padding: 10px;
+                padding-right: 0;
+                color: white;
+            }
+            .tel__desc {
+                display: inline-block;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+            .tel__no {
+                display: none;
+            }
+            .tel__no-sp {
+                height: 15px;
+                width: auto;
+                padding: 9px 20px 9px 0;
+            }
         }
     }
 } // sp
@@ -48,7 +61,7 @@
 @media only screen and (min-width: $mobileSize) {
     .header {
         width: 100%;
-        position: fixed;
+        position: absolute;
         height: 75px;
         z-index: 3;
         transition: all 400ms linear;
@@ -57,35 +70,53 @@
             top: -100px;
         }
         .logo {
-            height: 20px;
+            height: 15px;
             width: auto;
             display: inline-block;
             margin: 24px 0 0 24px;
-            img {
-                height: 20px;
-                width: auto;
+            a {
+                img {
+                    height: 15px;
+                    width: auto;
+                }
             }
         }
     }
     .tel {
         height: 38;
-        width: 330px;
+        width: auto;
         margin-top: 20px;
         background-color: #8fc31f;
+        border: 2px solid #8fc31f;
         float: right;
         color: white;
         vertical-align: middle;
-        p {
-            padding: 10px;
+        transition: all 300ms linear;
+        &:hover {
+            background-color: #ffffff;
+            a {
+                p {
+                    color: #8fc31f;
+                }
+            }
         }
-        .tel__desc {
-            display: inline-block;
+        a {
+            p {
+                padding: 10px;
+                color: white;
+            }
+            .tel__desc {
+                display: inline-block;
+                margin-left: 10px;
+            }
+            .tel__no {
+                display: inline-block;
+                padding-left: 0;
+            }
+            .tel__no-sp {
+                display: none;
+            }
         }
-        .tel__no {
-            display: inline-block
-        }
-        .tel__no-sp {
-            display: none;
-        }
+
     }
 } // pc
