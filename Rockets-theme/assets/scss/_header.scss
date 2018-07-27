@@ -1,0 +1,35 @@
+@media only screen and (max-width: $mobileSize) {
+
+}
+
+@media only screen and (min-width: $mobileSize) {
+    .header {
+        height: 100px;
+        width: 100%;
+        background-color: rgba(10,10,10,0.9);
+        &.top {
+            background-color: rgba(255,80,80,0.9);
+        }
+        &.post {
+            background-color: rgba(80,80,255,0.9);
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 0;
+                letter-spacing: 0;
+                box-sizing: border-box;
+                a {
+                    padding: 7px;
+                    display: block;
+                    background-color: rgba(10,10,10,0.5);
+                    color: white;
+                    font-size: 15px;
+                }
+            }
+        }
+    } // header
+}
