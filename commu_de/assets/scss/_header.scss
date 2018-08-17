@@ -1,0 +1,306 @@
+// Mobile first
+
+@media only screen and (max-width: $mobileSize){
+	$headerFontColor: rgb(250,250,250);
+	.header {
+		width: 100%;
+		height: 480px;
+		position: relative;
+		.header__layer {
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+			&.background {
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: url('../images/commons/header-color-background.png') no-repeat center;
+				z-index: 2;
+			}
+			&.slider {
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: url('../images/commons/sp-header-bg.png') no-repeat center;
+				z-index: 3;
+				.slider__container {
+					display: none;
+				}
+			}
+			&.data {
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 4;
+				color: white;
+				.data__wrapper {
+					height: 100%;
+					width: calc(100% - 50px);		
+					display: block;
+					margin: 0 25px;
+					position: relative;
+					.fixed__header {
+						width: 100%;
+						display: block;
+						position: fixed;
+						transition: all 700ms linear;
+						.fixed__container {
+							width: 100%;
+							position: relative;
+							.logo {
+								img {
+									top: 15px;
+									left: -11px;
+									position: absolute;
+									height: 12px;
+									width: auto;
+								}
+							}
+							& > span {
+								font-family: 'Roboto', sans-serif;
+								position: absolute;
+								top: 10px;
+								right: 35px;
+								& + span {
+									top: 32px;
+									right: 36px;
+									font-size: 12px;
+								}
+							}	
+						}
+					}
+					.header__text {
+						position: absolute;
+						bottom: 88px;
+						h2 {
+							font-size: 24px;
+							line-height: 1.7;
+						}
+						.header__desc {
+							font-family: 'Roboto', sans-serif;
+							font-size: 14px;
+							line-height: 1.3;
+							display: inline;
+
+							& + span {
+								font-size: 13px;
+								line-height: 1.7;
+								padding-left: 10px;
+							}
+						}
+						.header__paragraph {	
+							font-family: 'Roboto', sans-serif;
+							font-size: 13px;
+							line-height: 2;
+						}
+						a {
+							width: 220px;
+							margin: 20px 0;
+							padding: 12px 0;
+							display: block;
+							text-align: center;
+							border-radius: 30px;
+							background-color: #f6f6f6;
+							color: black;
+							font-size: 12px;
+							line-height: 1.2;
+							transition: all 1s ease;
+							&:hover {
+								background-color: #2775f6;
+								color: #fff;
+							}
+						}
+					}
+				}
+	
+			}
+		}
+	}
+	
+} //.SP
+
+@media only screen and (min-width: $mobileSize){
+	$headerFontColor: rgb(250,250,250);
+	.header {
+		width: 100%;
+		height: 900px;
+		background-color: #0f0f11;
+		.header__layer {
+			width: 100%;
+			margin: 0 auto;
+			height: 900px;
+			position: relative;
+			z-index: 1;
+			&.background {
+				background: url('./../images/commons/header-color-background.png') no-repeat center;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 2;
+			}
+			&.slider {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 3;
+				.slider__container {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					// background: url('./../images/commons/header-background.png') no-repeat right top;
+					// background-size: 1100px 1120px;
+					overflow: hidden;
+					.animation {
+						position: absolute;
+						width: auto;
+						animation-name: fadeIn;
+						animation-duration: 1500ms;
+						animation-fill-mode: forwards;
+						opacity: 0;
+						&:first-child {
+							top: 0px;
+							right: 447px; 
+							height: 151px;
+							animation-delay: 1000ms;
+						}
+						&:nth-child(2){
+							top: 0px;
+							right: 557px;
+							height: 404px;
+							animation-delay: 1700ms;
+						}
+						&:nth-child(3){
+							top: 0;
+							right: 0;
+							height: 419px;
+							animation-delay: 2400ms;
+						}
+						&:nth-child(4){
+							height: 532px;
+							right: 321px;
+							top: 212px;
+							animation-delay: 3100ms;
+						}
+						&:nth-child(5){
+							height: 436px;
+							right: 0;
+							top: 352px;
+							animation-delay: 3800ms;
+						}
+						&:nth-child(6) {
+							bottom: -217px;
+							right: 228px;
+							height: 534px;
+							animation-delay: 4500ms;
+						}
+					}
+				
+				}
+
+			}
+			&.data {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 4;
+				.data__wrapper {
+					width: 1100px; // width of text container compared to logo and contact
+					height: 900px;
+					margin: 0 auto;
+					position: relative;
+					.fixed__header {
+						height: 100px;
+						width: 1100px;
+						margin: 0 auto;
+						display: block;
+						position: fixed;
+						z-index: 5;
+						.fixed__container {
+							height: 100px;
+							width: 1100px;
+							margin: 0 auto;
+							position: relative;
+							.logo {
+								position: absolute;
+								top: 32px;
+								left: -140px;
+								img {
+									width: 130px;
+									height: 15px;
+								}
+							}
+							& > span {
+								position: absolute;
+								right: -140px;
+								top: 20px;
+								font-size: 18px;
+								color: white;
+								font-size: 18px;
+								line-height: 1.7;
+								& + span {
+									position: absolute;
+									top: 46px;
+									right: -140px;
+									color: white;
+									font-size: 12px;
+								}
+							}
+						}	
+						}			
+					.header__text {
+						width: 60%;
+						color: $headerFontColor;
+						position: absolute;
+						top: 325px;
+						left: 0;
+						h2 {
+							font-size: 36px;
+							line-height: 1.2;
+						}
+						.header__desc {
+							margin-bottom: 30px;
+							font-size: 20px;
+							line-height: 2.25;
+						}
+						.header__paragraph {
+							font-size: 15px;
+							line-height: 1.8;
+						}
+						a {
+							width: 335px;
+							margin: 45px 0;
+							padding: 15px 0;
+							display: block;
+							text-align: center;
+							border-radius: 30px;
+							background-color: #f6f6f6;
+							color: black;
+							font-size: 16px;
+							line-height: 1.6;
+							transition: all 1s ease;
+							&:hover {
+								background-color: #2775f6;
+								color: #fff;
+							}
+						}
+					}
+				}
+	
+			}
+		}
+	}
+	
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

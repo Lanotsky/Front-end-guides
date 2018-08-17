@@ -1,0 +1,14 @@
+// @font-face {
+// 	font-family: 'NotoSans';
+// 	src: url('../../assets/fonts/NotoSansCJKjp-Regular.otf');
+// }
+
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css); 
+
+html body {
+	// font-family: 'NotoSans', sans-serif;
+	font-family: 'Noto Sans Japanese', sans-serif;
+	height: 100vh;
+	width: 100%;
+}
+
