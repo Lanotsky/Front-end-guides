@@ -1,4 +1,27 @@
 html body {
     height: 100vh;
     width: 100%;
+    .pc {
+    	display: block;
+
+    }
+    .sp {
+    	display: none;
+    }
+
+}
+
+@media only screen and (max-width: $mobileSize) {
+html body {
+    height: 100vh;
+    width: 100%;
+    .pc {
+    	display: none;
+
+    }
+    .sp {
+    	display: block;
+    }
+
+}
 }

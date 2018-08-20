@@ -38,6 +38,9 @@
                     line-height: 1.5;
                     color: white;
                     text-align: center;
+                    a {
+                        color: inherit;
+                    }
                     &:after {
                         content: '';
                         background: url('./../images/common/arrow_right_white.png') no-repeat 0 13px;
@@ -137,15 +140,15 @@
                     &:after {
                         background: url("./../images/common/arrow_right_white.png") no-repeat 0 11px;
                         background-size: 14px auto;
-                        margin-left: -12%;
-                        margin-right: 12%;
+                        margin-left: -13%;
+                        margin-right: 3%;
                     }
                 }
                 p + p {
                     margin: 0 12px 25px;
                     &:after {
-                        margin-left: -12%;
-                        margin-right: 12%;
+                        margin-left: -13%;
+                        margin-right: 3%;
                     }
                 }
             } // .kv__choice

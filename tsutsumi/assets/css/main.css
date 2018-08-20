@@ -72,7 +72,7 @@ html {
   letter-spacing: 0.06em; }
 
 body {
-  font-family: "Hiragino Sans GB W3"; }
+  font-family: Helvetica Neue, Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
 
 html,
 body {
@@ -402,7 +402,19 @@ template {
 html body {
   height: 100vh;
   width: 100%; }
+  html body .pc {
+    display: block; }
+  html body .sp {
+    display: none; }
 
+@media only screen and (max-width: 768px) {
+  html body {
+    height: 100vh;
+    width: 100%; }
+    html body .pc {
+      display: none; }
+    html body .sp {
+      display: block; } }
 .header {
   padding-top: 10px;
   padding-bottom: 45px;
@@ -431,7 +443,12 @@ html body {
       margin-bottom: -12px; }
       .header .header__container .logo img {
         margin: 0 auto;
-        max-width: 283px; }
+        max-width: 283px;
+        transition: all .25s ease-out; }
+        .header .header__container .logo img:hover {
+          -webkit-filter: opacity(0.2);
+          filter: opacity(0.7);
+          cursor: pointer; }
     .header .header__container .contact {
       width: 50%;
       display: inline-block;
@@ -447,21 +464,36 @@ html body {
         .header .header__container .contact .contact-number img {
           max-width: 220px; }
       .header .header__container .contact .button {
+        border: #e39300 2px solid;
         display: inline-block;
         background-color: #e39300;
-        vertical-align: bottom; }
+        vertical-align: bottom;
+        transition: all .25s ease-out;
+        color: white; }
+        .header .header__container .contact .button:hover {
+          background-color: white;
+          color: #e39300; }
+          .header .header__container .contact .button:hover a p span {
+            background: url("./../images/common/arrow_right_orange.png") no-repeat 8px 0;
+            background-size: 10px auto;
+            width: 20px;
+            height: 15px;
+            vertical-align: middle;
+            display: inline-block;
+            float: right;
+            margin-top: -3px; }
         .header .header__container .contact .button a {
-          text-decoration: none; }
+          text-decoration: none;
+          color: inherit; }
           .header .header__container .contact .button a p {
             padding: 13px 10px;
             font-size: 18px;
             letter-spacing: 0.005em;
             text-decoration: none;
-            color: white;
+            color: inherit;
             vertical-align: bottom;
             line-height: 0.45; }
-            .header .header__container .contact .button a p:after {
-              content: '';
+            .header .header__container .contact .button a p span {
               background: url("./../images/common/arrow_right_white.png") no-repeat 8px 0;
               background-size: 10px auto;
               width: 20px;
@@ -521,7 +553,8 @@ html body {
     .header .header__container {
       width: 100%;
       min-height: 30px;
-      clear: both; }
+      clear: both;
+      transition: all .25s ease-out; }
       .header .header__container .burger__toggle {
         top: 2.5vh;
         left: 3vw;
@@ -547,6 +580,7 @@ html body {
       .header .header__container .contact {
         display: none; }
       .header .header__container .navigation {
+        margin-top: 0;
         display: none; }
         .header .header__container .navigation ul li {
           width: 100%;
@@ -587,9 +621,10 @@ html body {
       text-align: center;
       font-weight: 600; }
       .main__content.top .main__contentContainer .topContent__description .title {
-        font-weight: 600px;
+        font-weight: 600;
         font-size: 34px;
-        line-height: 1.4; }
+        line-height: 1.4;
+        font-family: 'Times New Roman', 'Times', 'Hiragino Mincho ProN', '∩╝¡∩╝│ ∩╝░µÿÄµ£¥','MS PMincho', Meiryo, serif; }
       .main__content.top .main__contentContainer .topContent__description p {
         margin-top: 40px;
         font-size: 18px;
@@ -599,21 +634,41 @@ html body {
       padding: 17px 0 15px;
       width: 639px;
       text-align: center;
-      background-color: #e29300; }
-      .main__content.top .main__contentContainer .subscribe__button a p {
-        font-size: 24px;
-        line-height: 1.8;
-        color: white; }
-      .main__content.top .main__contentContainer .subscribe__button::after {
-        content: '';
-        background: url("./../images/common/arrow_right_white.png") no-repeat 0 13px;
-        background-size: 15px auto;
-        width: 185px;
-        height: 46px;
-        vertical-align: middle;
-        display: inline-block;
-        float: right;
-        margin-top: -46px; }
+      background-color: #e29300;
+      border: 5px solid  #e29300;
+      color: white;
+      transition: all .25s ease-out; }
+      .main__content.top .main__contentContainer .subscribe__button:hover {
+        background-color: white;
+        color: #e29300; }
+        .main__content.top .main__contentContainer .subscribe__button:hover a p span {
+          width: 185px;
+          height: 46px;
+          margin-top: -4px;
+          margin-left: -185px;
+          background: url(./../images/common/arrow_right_orange.png) no-repeat 0 13px;
+          background-size: 15px auto;
+          vertical-align: middle;
+          display: inline-block;
+          float: right;
+          text-align: right; }
+      .main__content.top .main__contentContainer .subscribe__button a {
+        color: inherit; }
+        .main__content.top .main__contentContainer .subscribe__button a p {
+          font-size: 24px;
+          line-height: 1.8;
+          color: inherit; }
+          .main__content.top .main__contentContainer .subscribe__button a p span {
+            width: 185px;
+            height: 46px;
+            margin-top: -4px;
+            margin-left: -185px;
+            background: url(./../images/common/arrow_right_white.png) no-repeat 0 13px;
+            background-size: 15px auto;
+            vertical-align: middle;
+            display: inline-block;
+            float: right;
+            text-align: right; }
     .main__content.top .main__contentContainer .topContent__news {
       padding: 135px 0; }
       .main__content.top .main__contentContainer .topContent__news .news__title {
@@ -624,9 +679,13 @@ html body {
         .main__content.top .main__contentContainer .topContent__news table tbody tr td {
           vertical-align: top; }
           .main__content.top .main__contentContainer .topContent__news table tbody tr td:nth-child(1) {
+            font-weight: 500;
             width: 110px; }
           .main__content.top .main__contentContainer .topContent__news table tbody tr td:nth-child(2) {
             width: 990px; }
+            .main__content.top .main__contentContainer .topContent__news table tbody tr td:nth-child(2):hover {
+              cursor: pointer;
+              text-decoration: underline; }
           .main__content.top .main__contentContainer .topContent__news table tbody tr td p {
             padding: 5px 0;
             font-size: 18px;
@@ -634,24 +693,25 @@ html body {
       .main__content.top .main__contentContainer .topContent__news .news__button {
         width: 220px;
         float: right;
-        background-color: #727171; }
-        .main__content.top .main__contentContainer .topContent__news .news__button a p {
-          padding: 5px 0;
-          text-align: center;
-          font-size: 20px;
-          line-height: 1.7;
-          color: white; }
-          .main__content.top .main__contentContainer .topContent__news .news__button a p:after {
-            content: '';
-            background: url("./../images/common/arrow_right_white.png") no-repeat 0 13px;
-            background-size: 10px auto;
-            width: 57px;
-            height: 30px;
-            vertical-align: middle;
-            display: inline-block;
-            float: right;
-            margin-top: -3px;
-            margin-left: -21px; }
+        background-color: #727171;
+        border: 2px solid  #727171;
+        color: white;
+        transition: all .25s ease-out; }
+        .main__content.top .main__contentContainer .topContent__news .news__button:hover {
+          background-color: white;
+          color: #727171; }
+        .main__content.top .main__contentContainer .topContent__news .news__button a {
+          color: inherit; }
+          .main__content.top .main__contentContainer .topContent__news .news__button a p {
+            padding: 5px 0;
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.7;
+            color: inherit; }
+            .main__content.top .main__contentContainer .topContent__news .news__button a p i {
+              font-size: 30px;
+              padding: 0 0 2px;
+              vertical-align: bottom; }
     .main__content.top .main__contentContainer .topContent__column {
       margin-bottom: 150px; }
       .main__content.top .main__contentContainer .topContent__column .news__title {
@@ -676,7 +736,11 @@ html body {
             width: calc(50% - 18px);
             margin-right: 18px;
             display: inline-block;
-            vertical-align: top; }
+            vertical-align: top;
+            transition: all .25s ease-out; }
+            .main__content.top .main__contentContainer .topContent__column .columnList__container .columnList_item .columnList__image:hover {
+              filter: opacity(0.8);
+              cursor: pointer; }
           .main__content.top .main__contentContainer .topContent__column .columnList__container .columnList_item .columnList__info {
             width: 50%;
             display: inline-block; }
@@ -688,25 +752,26 @@ html body {
               line-height: 1.9; }
       .main__content.top .main__contentContainer .topContent__column .news__button {
         width: 220px;
+        border: 2px solid #727171;
         float: right;
-        background-color: #727171; }
-        .main__content.top .main__contentContainer .topContent__column .news__button a p {
-          padding: 5px 0;
-          text-align: center;
-          font-size: 20px;
-          line-height: 1.7;
-          color: white; }
-          .main__content.top .main__contentContainer .topContent__column .news__button a p:after {
-            content: '';
-            background: url("./../images/common/arrow_right_white.png") no-repeat 0 13px;
-            background-size: 10px auto;
-            width: 57px;
-            height: 30px;
-            vertical-align: middle;
-            display: inline-block;
-            float: right;
-            margin-top: -3px;
-            margin-left: -21px; }
+        background-color: #727171;
+        color: white;
+        transition: all .25s ease-out; }
+        .main__content.top .main__contentContainer .topContent__column .news__button:hover {
+          background-color: white;
+          color: #727171; }
+        .main__content.top .main__contentContainer .topContent__column .news__button a {
+          color: inherit; }
+          .main__content.top .main__contentContainer .topContent__column .news__button a p {
+            padding: 5px 0;
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.7;
+            color: inherit; }
+            .main__content.top .main__contentContainer .topContent__column .news__button a p i {
+              font-size: 30px;
+              padding: 0 0 2px;
+              vertical-align: bottom; }
     .main__content.top .main__contentContainer .media__container {
       padding-top: 82px;
       width: 100%; }
@@ -727,9 +792,26 @@ html body {
 .button__hook {
   width: 48px;
   height: 48px;
+  border: 2px solid #727171;
+  background-color: #727171;
   position: fixed;
   bottom: 40px;
-  right: 10%; }
+  right: 5%; }
+  .button__hook a {
+    width: 100%;
+    height: 100%;
+    background: url("./../images/common/link-up-img.png") no-repeat;
+    background-size: 40% auto;
+    background-position: center;
+    display: block;
+    transition: all 0.25s ease-out; }
+    .button__hook a:hover {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      background-size: 40% auto;
+      background-image: url("./../images/common/link-up-img-hover.png");
+      background-position: center; }
 
 @media only screen and (max-width: 768px) {
   .main__content.top .main__contentContainer:first-child {
@@ -737,7 +819,6 @@ html body {
   .main__content.top .main__contentContainer {
     width: 100%; }
     .main__content.top .main__contentContainer img {
-      display: block;
       box-sizing: border-box;
       background: url("../images/") no-repeat; }
     .main__content.top .main__contentContainer .topContent__description {
@@ -792,7 +873,8 @@ html body {
           vertical-align: top; }
           .main__content.top .main__contentContainer .topContent__column .columnList__container .columnList_item .columnList__image {
             width: auto;
-            margin-right: 20px; }
+            margin-right: 20px;
+            display: inline-block; }
             .main__content.top .main__contentContainer .topContent__column .columnList__container .columnList_item .columnList__image img {
               width: auto;
               height: 95px; }
@@ -811,11 +893,31 @@ html body {
         margin: 0 auto; }
     .main__content.top .main__contentContainer .subscribe__button {
       width: calc(100% - 24px);
-      margin: 0 12px; }
+      border: 5px solid #e29300;
+      margin: 0 12px;
+      border: 0; }
+      .main__content.top .main__contentContainer .subscribe__button:hover a p span {
+        background: url(./../images/common/arrow_right_orange.png) no-repeat 0 0;
+        background-size: 10px auto;
+        width: 18vw;
+        height: 18px;
+        vertical-align: middle;
+        display: inline-block;
+        float: right;
+        margin-top: 6px;
+        margin-left: -109px; }
       .main__content.top .main__contentContainer .subscribe__button a p {
         font-size: 16px; }
-      .main__content.top .main__contentContainer .subscribe__button:after {
-        display: none; }
+        .main__content.top .main__contentContainer .subscribe__button a p span {
+          background: url(./../images/common/arrow_right_white.png) no-repeat 0 0;
+          background-size: 10px auto;
+          width: 18vw;
+          height: 18px;
+          vertical-align: middle;
+          display: inline-block;
+          float: right;
+          margin-top: 6px;
+          margin-left: -109px; }
     .main__content.top .main__contentContainer .media__container .media__source {
       width: 100%; }
       .main__content.top .main__contentContainer .media__container .media__source p {
@@ -825,9 +927,7 @@ html body {
         border-left: none;
         border-right: none; }
         .main__content.top .main__contentContainer .media__container .media__source div iframe {
-          width: 100%; }
-  .main__content.top .full img {
-    height: 214px; } }
+          width: 100%; } }
 .main__content.child .main__contentContainer {
   width: 1100px;
   margin: 0 auto; }
@@ -853,6 +953,8 @@ html body {
       line-height: 1.5;
       color: white;
       text-align: center; }
+      .main__content.child .main__contentContainer .kv__choice p a {
+        color: inherit; }
       .main__content.child .main__contentContainer .kv__choice p:after {
         content: '';
         background: url("./../images/common/arrow_right_white.png") no-repeat 0 13px;
@@ -925,13 +1027,13 @@ html body {
           .main__content.child .main__contentContainer .kv__choice p:after {
             background: url("./../images/common/arrow_right_white.png") no-repeat 0 11px;
             background-size: 14px auto;
-            margin-left: -12%;
-            margin-right: 12%; }
+            margin-left: -13%;
+            margin-right: 3%; }
         .main__content.child .main__contentContainer .kv__choice p + p {
           margin: 0 12px 25px; }
           .main__content.child .main__contentContainer .kv__choice p + p:after {
-            margin-left: -12%;
-            margin-right: 12%; }
+            margin-left: -13%;
+            margin-right: 3%; }
       .main__content.child .main__contentContainer .content__faq .faq__section {
         margin-top: 40px; }
         .main__content.child .main__contentContainer .content__faq .faq__section div {
@@ -955,7 +1057,7 @@ html body {
 .kv__section {
   position: relative; }
   .kv__section .kv__swiperAPI {
-    padding: 1px;
+    padding: 0;
     height: 600px;
     font-size: 0; }
     .kv__section .kv__swiperAPI .swiper-container {
@@ -977,15 +1079,24 @@ html body {
         width: calc(100% / 3);
         display: block;
         float: left;
-        color: white; }
+        color: white;
+        transition: all .25s ease-out; }
+        .kv__section .kv__contentContainer .kv__content .kv__contentBlock:hover {
+          cursor: pointer; }
         .kv__section .kv__contentContainer .kv__content .kv__contentBlock.first {
           background-color: #00437c; }
+          .kv__section .kv__contentContainer .kv__content .kv__contentBlock.first:hover {
+            background-color: #336896; }
         .kv__section .kv__contentContainer .kv__content .kv__contentBlock.second {
           background-color: #005ca2; }
+          .kv__section .kv__contentContainer .kv__content .kv__contentBlock.second:hover {
+            background-color: #337cb4; }
         .kv__section .kv__contentContainer .kv__content .kv__contentBlock.third {
           background-color: #0075b6; }
+          .kv__section .kv__contentContainer .kv__content .kv__contentBlock.third:hover {
+            background-color: #3390c4; }
         .kv__section .kv__contentContainer .kv__content .kv__contentBlock .kv__blockTitle {
-          margin-top: 20px;
+          margin-top: 0;
           text-align: center;
           font-size: 26px;
           line-height: 1.8; }
@@ -1081,6 +1192,8 @@ html body {
       .footer .footer__container .footer__nav ul li a p {
         font-size: 14px;
         text-align: center; }
+      .footer .footer__container .footer__nav ul li:hover {
+        text-decoration: underline; }
     .footer .footer__container .footer__info {
       margin: 0 auto; }
       .footer .footer__container .footer__info .footer__img {
@@ -1090,7 +1203,12 @@ html body {
         margin: 0 auto; }
         .footer .footer__container .footer__info .footer__img img {
           width: 100%;
-          height: auto; }
+          height: auto;
+          transition: all .25s ease-out; }
+          .footer .footer__container .footer__info .footer__img img:hover {
+            -webkit-filter: opacity(0.2);
+            filter: opacity(0.7);
+            cursor: pointer; }
       .footer .footer__container .footer__info p {
         font-size: 14px;
         line-height: 1.7;
@@ -1114,6 +1232,8 @@ html body {
         text-align: initial;
         color: #ffffff;
         font-size: 12px; }
+        .footer .footer__container .footer__nav ul li a p:hover {
+          text-decoration: underline; }
     .footer .footer__container .footer__info {
       padding: 63px 0 65px 0; }
       .footer .footer__container .footer__info .footer__img {

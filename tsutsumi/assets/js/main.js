@@ -13,6 +13,7 @@ function kvSwiper(){
     });
 }
 
+
 function scrollToTop(){
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -71,7 +72,6 @@ function toggle(){
       });
   })
 }
-
 
 $(function(){
     kvSwiper();

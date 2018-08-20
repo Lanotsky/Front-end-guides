@@ -31,6 +31,12 @@
             img {
                 margin: 0 auto;
                 max-width: 283px;
+                transition: all .25s ease-out;
+                &:hover {
+                    -webkit-filter: opacity(.2);
+                    filter: opacity(0.7);
+                    cursor: pointer;
+                }
             }
         }
         .contact {
@@ -50,22 +56,42 @@
                 }
             }
             .button {
+                border: #e39300 2px solid;
                 display: inline-block;
                 background-color: #e39300;
                 vertical-align: bottom;
-
+                transition: all .25s ease-out;
+                color: white;
+                &:hover {
+                    background-color: white;
+                    color: #e39300;
+                    a {
+                        p {
+                            span {
+                                background: url('./../images/common/arrow_right_orange.png') no-repeat 8px 0;
+                                background-size: 10px auto;
+                                width: 20px;
+                                height: 15px;
+                                vertical-align: middle;
+                                display: inline-block;
+                                float: right;
+                                margin-top: -3px;    
+                            }
+                        }
+                    }
+                }
                 a {
                     text-decoration: none;
+                    color: inherit;
                     p {
                         padding: 13px 10px;
                         font-size: 18px;
                         letter-spacing: 0.005em;
                         text-decoration: none;
-                        color: white;
+                        color: inherit;
                         vertical-align: bottom;
                         line-height: 0.45;
-                        &:after {
-                            content: '';
+                        span {
                             background: url('./../images/common/arrow_right_white.png') no-repeat 8px 0;
                             background-size: 10px auto;
                             width: 20px;
@@ -73,8 +99,35 @@
                             vertical-align: middle;
                             display: inline-block;
                             float: right;
-                            margin-top: -3px;
+                            margin-top: -3px;    
                         }
+                        // i {
+                        //     font-size: 18px;
+                        //     padding: 0 0 2px;
+                        //     vertical-align: middle;
+                        // }
+                        // &:hover:after {
+                        //     content: '';
+                        //     background: url('./../images/common/arrow_right_orange.png') no-repeat 8px 0;
+                        //     background-size: 10px auto;
+                        //     width: 20px;
+                        //     height: 15px;
+                        //     vertical-align: middle;
+                        //     display: inline-block;
+                        //     float: right;
+                        //     margin-top: -3px;
+                        // }
+                        // &:after {
+                        //     content: '';
+                        //     background: url('./../images/common/arrow_right_white.png') no-repeat 8px 0;
+                        //     background-size: 10px auto;
+                        //     width: 20px;
+                        //     height: 15px;
+                        //     vertical-align: middle;
+                        //     display: inline-block;
+                        //     float: right;
+                        //     margin-top: -3px;
+                        // }
                     }
                 }
             }
@@ -151,6 +204,7 @@
             width: 100%;
             min-height: 30px;
             clear: both;
+            transition: all .25s ease-out;
             .burger__toggle {
                 top: 2.5vh;
                 left: 3vw;
@@ -188,6 +242,7 @@
             }
 
             .navigation {
+                margin-top: 0;
                 display: none;
                 ul {
                     li {

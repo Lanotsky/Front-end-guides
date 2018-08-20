@@ -3,7 +3,7 @@
     // SWIPER ****************
     .kv__swiperAPI {
         // prevents .swiper-container from collapsing
-        padding: 1px;
+        padding: 0;
         height: 600px;
         font-size: 0;
         .swiper-container {
@@ -36,17 +36,30 @@
                 display: block;
                 float: left;
                 color: white;
+                transition: all .25s ease-out;
+                &:hover {
+                    cursor: pointer;
+                }
                 &.first {
                     background-color: #00437c;
+                    &:hover {
+                        background-color: #336896;;
+                    }
                 }
                 &.second {
                     background-color: #005ca2;
+                    &:hover {
+                        background-color: #337cb4;
+                    }
                 }
                 &.third {
                     background-color: #0075b6;
+                    &:hover {
+                        background-color: #3390c4;
+                    }
                 }
                 .kv__blockTitle{
-                    margin-top: 20px;
+                    margin-top: 0;
                     text-align: center;
                     font-size: 26px;
                     line-height: 1.8;
